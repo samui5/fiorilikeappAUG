@@ -8,7 +8,7 @@
 
         <IconTabBar>
             <items>
-                <IconTabFilter key="idMore" text="More Details" icon="sap-icon://warning">
+                <IconTabFilter key="idMore" text="More Info" icon="sap-icon://warning">
                     <core:Fragment fragmentName="tcs.hr.hire.fragments.moreInfo" type="XML" />
                 </IconTabFilter>
                 <IconTabFilter key="idSupplier" text="Suppliers" icon="sap-icon://supplier">
