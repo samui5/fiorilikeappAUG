@@ -1,0 +1,28 @@
+specVersion: '2.4'
+metadata:
+  name: fiorilikeapp
+type: application
+server:
+  customMiddleware:
+  - name: fiori-tools-proxy
+    afterMiddleware: compression
+    configuration:
+      backend:
+        - path: /sap/opu/odata
+          url: http://103.207.171.202:8021/
+builder:
+  resources:
+    excludes:
+      - index.html
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          url: http://103.207.171.202:8021/
+          client: "800"
+        app:
+          name: ZZ1_ANUBHAVAUG
+          description: My Fiori app in S/4HANA
+          package: ZTEST
+          transport: "CFNK901441"          

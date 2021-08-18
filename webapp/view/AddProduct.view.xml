@@ -1,0 +1,58 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="tcs.hr.hire.controller.AddProduct"
+xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core">
+    <Page title="Create a New Product">
+        <VBox class="sapUiSmallMargin">
+			<f:SimpleForm id="SimpleFormChange354"
+				editable="true"
+				layout="ResponsiveGridLayout"
+				title="Address"
+				labelSpanXL="3"
+				labelSpanL="3"
+				labelSpanM="3"
+				labelSpanS="12"
+				adjustLabelSpan="false"
+				emptySpanXL="4"
+				emptySpanL="4"
+				emptySpanM="4"
+				emptySpanS="0"
+				columnsXL="1"
+				columnsL="1"
+				columnsM="1"
+				singleContainerFullSize="false" >
+				<f:content>
+					<Label text="Product Id" />
+					<Input id="name" submit="onSubmit" value="{localModel>/productData/PRODUCT_ID}" />
+					<Button text="Load Most Expensive" icon="sap-icon://money" press="onExpensive" />
+					<Label text="Description" />
+					<Input value="{localModel>/productData/DESCRIPTION}" />
+					<Label text="Supplier ID" />
+					<Input value="{localModel>/productData/SUPPLIER_ID}" 
+					showValueHelp="true" valueHelpRequest="onValueHelp">
+					</Input>
+					<Text id="suppName" />
+					<Label text="Price" />
+					<Input value="{localModel>/productData/PRICE}">
+						<layoutData>
+							<l:GridData span="XL1 L2 M2 S4" />
+						</layoutData>
+					</Input>
+					<Select id="country" selectedKey="{localModel>/productData/CURRENCY_CODE}">
+						<items>
+							<core:Item text="Euro" key="EUR"/>
+							<core:Item text="US Dollor" key="USD"/>
+							<core:Item text="Indian Rupee" key="INR"/>
+						</items>
+					</Select>
+				</f:content>
+			</f:SimpleForm>
+		</VBox>
+    <footer>
+        <Toolbar>
+            <ToolbarSpacer />
+            <Button id="idSave" text="Save" icon="sap-icon://save" press="onSave" type="Accept"/>
+			<Button id="idDelete" text="Delete" enabled="false" icon="sap-icon://delete" press="onDelete" type="Reject"/>
+			<Button text="Clear" icon="sap-icon://clear-all" press="onClear" type="Reject"/>
+        </Toolbar>
+    </footer>
+    </Page>
+</mvc:View>
