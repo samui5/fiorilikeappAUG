@@ -15,7 +15,7 @@ sap.ui.define([
             var oRouter = this.getRouter();
             //Which will go and READ the Routing Configuration
             oRouter.initialize();
-
+ 
         },
         // createContent: function(){
         //     //creating Root View of our project
