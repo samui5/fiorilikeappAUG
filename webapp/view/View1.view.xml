@@ -70,6 +70,7 @@
                 <ToolbarSpacer />
                 <Button icon="sap-icon://delete" tooltip="Print/Delete Items" press="onDelete"></Button>
                 <Button press="onAdd" icon="sap-icon://add" tooltip="Add new product" />
+                <Button press="onNew" icon="sap-icon://home" text="Roxana Button" />
             </Toolbar>
         </footer>
     </Page>
