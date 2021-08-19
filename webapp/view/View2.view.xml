@@ -1,4 +1,5 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form"
+          xmlns:anubhav="tcs.hr.hire.controls"
     controllerName="tcs.hr.hire.controller.View2">
     <Page title="View 2" showNavButton="true" navButtonPress="onBack">
         <!-- <Button text="Back" press="onBack" /> -->
@@ -9,6 +10,8 @@
         <IconTabBar>
             <items>
                 <IconTabFilter key="idMore" text="More Info" icon="sap-icon://warning">
+                    <anubhav:Heading spiderman="Anubhav is here" bgcolor="black" color="blue"/>
+                    <anubhav:Heading spiderman="Anubhav Trainings.com" border="3px dashed red"/>
                     <core:Fragment fragmentName="tcs.hr.hire.fragments.moreInfo" type="XML" />
                 </IconTabFilter>
                 <IconTabFilter key="idSupplier" text="Suppliers" icon="sap-icon://supplier">
